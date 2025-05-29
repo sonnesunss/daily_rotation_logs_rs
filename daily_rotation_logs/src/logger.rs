@@ -65,12 +65,3 @@ pub fn init_logger<P: AsRef<Path>>(
 
     Ok(())
 }
-
-#[tokio::main]
-async fn main() -> anyhow::Result<(), Box<dyn std::error::Error>> {
-    init_logger("logs", "my_app.log", tracing::Level::INFO)?;
-
-    tracing::info!("App started");
-    tracing::error!("database connection failed");
-    Ok(())
-}

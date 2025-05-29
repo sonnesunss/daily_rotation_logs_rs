@@ -8,4 +8,4 @@ anyhow = "1.0.98"
 tracing = "0.1.41"
 tracing-appender = "0.2.3"
 tracing-subscriber = { version = "0.3.19", features = ["fmt", "time", "chrono", "env-filter"] }
-tokio = {version = "1.45.1", features = ["full"]}
+tokio = {version = "1.45.1", features = ["rt", "macros", "rt-multi-thread", "time"]}
